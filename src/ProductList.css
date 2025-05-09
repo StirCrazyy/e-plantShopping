@@ -163,13 +163,16 @@ body {
 .cart{
     color: white;
     display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 42px;
 }
 .cart_quantity_count{
     margin-top: 16px;
     /* background-color: red; */
     margin-left: 27px;
     position: absolute;
-    font-size: 29px;
+    font-size: 48px;
 
 }
 .plantname_heading{
@@ -193,6 +196,9 @@ body {
     .product-card {
         flex: 1 1 calc(50% - 20px); /* Adjust width for 2 cards per row with 20px gap on smaller screens */
         max-width: calc(50% - 20px); /* Adjust max-width for 2 cards per row with 20px gap on smaller screens */
+    }
+    .cart {
+        font-size: 38px;
     }
 }
 /* ProductList.css */
@@ -218,6 +224,43 @@ body {
   .product-button.added-to-cart {
     background-color: grey; /* Grey when product is added */
   }
+
+.product-button.disabled {
+    background-color: #cccccc;
+    cursor: not-allowed;
+}
+
+.cart-container {
+    position: relative;
+    display: inline-block;
+}
+
+.cart-count {
+    display: none;
+}
+
+.cart {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Remove or comment out the old cart-count styles if they exist */
+/* .cart-count {
+    position: absolute;
+    top: -8px;
+    right: -8px;
+    ...
+} */
+
+.disabled {
+    opacity: 0.7;
+    background-color: #4CAF50 !important;
+    color: white;
+}
+
   @media (max-width: 1200px) {
     .product-card {
       flex: 1 1 calc(33.33% - 20px); /* Adjust width for 3 cards per row with 20px gap on medium screens */
@@ -249,4 +292,29 @@ body {
       .ul div {
         text-align: center; /* Align text to the center */
       }
+      .cart {
+        font-size: 36px; /* Slightly smaller on mobile */
+    }
   }
+
+.category-heading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 30px 0;
+  text-align: center;
+}
+
+.category-line {
+  height: 2px;
+  background-color: #4CAF50;
+  flex: 1;
+  margin: 0 20px;
+}
+
+.category-name {
+  color: #4CAF50;
+  font-size: 24px;
+  padding: 0 20px;
+  white-space: nowrap;
+}
